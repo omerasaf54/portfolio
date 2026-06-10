@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MongoDB: Modern Veri Dünyası - Ömer Asaf</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+     <link rel="shortcut icon" href="https://github.com/omerasaf54.png" type="image/svg+xml" />
+    <link rel="icon" href="https://github.com/omerasaf54.png" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="https://github.com/omerasaf54.png" />
+</head>
+<body class="dark">
+    <div class="container">
+        <header class="blog-hero animate-fade-in">
+            <div class="blog-title-area">
+                <a href="../../pages/blog.html" class="back-btn" style="display: flex;">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                </a>
+                <h1>Veri Dünyasının Esnek Gücü: MongoDB</h1>
+            </div>
+            <time class="blog-card-date">15 Mayıs 2024 • 5 dk okuma</time>
+        </header>
+
+        <article class="blog-content">
+            <p>Günümüzün hızla değişen teknoloji dünyasında, veriler artık sadece satırlardan ve sütunlardan ibaret değil. Geleneksel SQL veritabanlarının katı şema yapısı, modern uygulamaların dinamik ihtiyaçlarını karşılamakta zorlandığında sahneye <strong>MongoDB</strong> çıkıyor.</p>
+
+            <h2>MongoDB Nedir?</h2>
+            <p>MongoDB, açık kaynaklı, doküman tabanlı (document-oriented) bir NoSQL veritabanıdır. Verileri klasik tablolar yerine JSON benzeri <strong>BSON</strong> (Binary JSON) formatında saklar. Bu yaklaşım, veritabanı şemasını önceden tanımlama zorunluluğunu ortadan kaldırarak geliştiricilere inanılmaz bir esneklik sunar.</p>
+
+            <h3>Neden NoSQL?</h3>
+            <p>İlişkisel veritabanları (MySQL, PostgreSQL) "JOIN" işlemleri ve katı kurallarıyla bilinir. MongoDB ise "birlikte kullanılması gereken verileri birlikte sakla" felsefesini benimser. Bu da özellikle büyük veri setlerinde ve yüksek trafikli sistemlerde okuma performansını maksimize eder.</p>
+
+            <h2>Temel Kavramlar</h2>
+            <p>MongoDB dünyasına girdiğinizde SQL'den bildiğiniz terimlerin karşılıkları şöyledir:</p>
+            <ul>
+                <li><strong>Database (Veritabanı):</strong> SQL ile aynıdır.</li>
+                <li><strong>Collection (Koleksiyon):</strong> SQL'deki "Table" (Tablo) karşılığıdır.</li>
+                <li><strong>Document (Doküman):</strong> SQL'deki "Row" (Satır) karşılığıdır. Veriler burada <code>{key: value}</code> şeklinde saklanır.</li>
+                <li><strong>Field (Alan):</strong> SQL'deki "Column" (Sütun) karşılığıdır.</li>
+            </ul>
+
+            <h2>MongoDB'nin Öne Çıkan Özellikleri</h2>
+            
+            <h3>1. Esnek Şema (Schemaless)</h3>
+            <p>Aynı koleksiyon içindeki iki farklı doküman, tamamen farklı alanlara sahip olabilir. Bir kullanıcı dokümanında telefon numarası varken diğerinde olmayabilir ve bu durum veritabanı seviyesinde bir hata oluşturmaz.</p>
+
+            <h3>2. Yatay Ölçeklenebilirlik (Sharding)</h3>
+            <p>Veriniz arttıkça tek bir sunucuyu güçlendirmek (Vertical Scaling) yerine, veriyi birden fazla sunucuya dağıtabilirsiniz (Horizontal Scaling). MongoDB bunu yerleşik "Sharding" özelliği ile otomatikleştirir.</p>
+
+            <h3>3. Yüksek Kullanılabilirlik (Replication)</h3>
+            <p>Verilerinizin kopyalarını farklı sunucularda tutarak (Replica Sets), ana sunucu çöktüğünde sistemin otomatik olarak yedek sunucudan devam etmesini sağlar.</p>
+
+            <h2>Temel İşlemler (CRUD)</h2>
+            <p>MongoDB ile etkileşime geçmek oldukça doğaldır, çünkü sorgular JavaScript nesneleri gibidir.</p>
+
+            <h3>Veri Ekleme</h3>
+            <pre><code style="color: #4ade80;">db.users.insertOne({
+  name: "Ömer Asaf",
+  role: "Developer",
+  skills: ["JavaScript", "MongoDB"]
+});</code></pre>
+
+            <h3>Veri Sorgulama</h3>
+            <pre><code style="color: #4ade80;">db.users.find({ role: "Developer" });</code></pre>
+
+            <h2>Aggregation Pipeline</h2>
+            <p>MongoDB'nin en güçlü yanlarından biri <strong>Aggregation Framework</strong>'tür. Verileri bir fabrikadaki bant sistemi gibi aşama aşama (match, group, sort, limit) işleyerek karmaşık raporlar oluşturmanıza olanak tanır.</p>
+
+            <h2>Sonuç</h2>
+            <p>Eğer hızla büyüyen, veri yapısı değişken ve ölçeklenebilir bir uygulama geliştiriyorsanız, MongoDB sizin için en doğru tercihlerden biri olacaktır. Modern web geliştirme ekosisteminde (MERN/MEAN stack) merkezi bir rol oynaması tesadüf değildir.</p>
+
+            <div style="margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--border-color);">
+                <h2 style="margin-top: 0; margin-bottom: 2rem;">Daha Fazlası</h2>
+                <div class="blog-list">
+                    <article class="blog-item" data-tag="css" data-title="tailwind css ile tasarım">
+                        <a class="blog-card-link" href="tailwind.html">
+                            <div class="blog-card-left">
+                                <h2 class="blog-card-title">Tailwind CSS ile Modern Tasarıma Giriş</h2>
+                                <p class="blog-card-date">20 Mayıs 2024</p>
+                            </div>
+                            <div class="blog-card-arrow">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="m5 12 7-7 7 7"></path><path d="M12 19V5"></path></svg>
+                            </div>
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </article>
+    </div>
+
+    <div class="dock-wrapper">
+            <nav class="dock-container">
+                <div class="dock-item">
+                    <a href="/" aria-label="Ana Sayfa" class="dock-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="icon">
+                            <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"></path>
+                            <path
+                                d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z">
+                            </path>
+                        </svg>
+                    </a>
+                </div>
+                <div class="dock-item">
+                    <a href="./blog.html" aria-label="Bloglar" class="dock-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="icon">
+                            <path d="M2 6h4"></path>
+                            <path d="M2 10h4"></path>
+                            <path d="M2 14h4"></path>
+                            <path d="M2 18h4"></path>
+                            <rect width="16" height="20" x="4" y="2" rx="2"></rect>
+                            <path d="M16 2v20"></path>
+                        </svg>
+                    </a>
+                </div>
+                <div class="dock-item">
+                    <a href="./projects.html" aria-label="Projeler" class="dock-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="icon">
+                            <path d="m14 13-8.381 8.38a1 1 0 0 1-3.001-3L11 9.999"></path>
+                            <path
+                                d="M15.973 4.027A13 13 0 0 0 5.902 2.373c-1.398.342-1.092 2.158.277 2.601a19.9 19.9 0 0 1 5.822 3.024">
+                            </path>
+                            <path
+                                d="M16.001 11.999a19.9 19.9 0 0 1 3.024 5.824c.444 1.369 2.26 1.676 2.603.278A13 13 0 0 0 20 8.069">
+                            </path>
+                            <path
+                                d="M18.352 3.352a1.205 1.205 0 0 0-1.704 0l-5.296 5.296a1.205 1.205 0 0 0 0 1.704l2.296 2.296a1.205 1.205 0 0 0 1.704 0l5.296-5.296a1.205 1.205 0 0 0 0-1.704z">
+                            </path>
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="dock-divider"></div>
+
+                <div class="dock-item">
+                    <a href="https://github.com/omerasaf54" target="_blank" aria-label="GitHub" class="dock-link">
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" class="icon"
+                            height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12">
+                            </path>
+                        </svg>
+                    </a>
+                </div>
+                <div class="dock-item">
+                    <a href="https://instagram.com/asaf_omerr54" target="_blank" aria-label="Instagram"
+                        class="dock-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="icon">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37a4 4 0 1 1-4.63-4.63 4 4 0 0 1 4.63 4.63z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                    </a>
+                </div>
+                <div class="dock-item">
+                    <a href="./contact.html" aria-label="Mail" class="dock-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="icon">
+                            <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path>
+                            <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="dock-divider"></div>
+
+                <div class="dock-item">
+                    <button aria-label="Temayı Değiştir" class="dock-button" id="themeToggle"></button>
+                </div>
+            </nav>
+        </div>  
+
+    <script src="../../js/main.js"></script>
+    <script src="../../js/theme.js"></script>
+</body>
+</html>

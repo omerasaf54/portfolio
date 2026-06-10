@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind CSS: Tasarımın Geleceği - Ömer Asaf</title>
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/responsive.css" />
+    <link rel="shortcut icon" href="https://github.com/omerasaf54.png" type="image/svg+xml" />
+    <link rel="icon" href="https://github.com/omerasaf54.png" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="https://github.com/omerasaf54.png" />
+</head>
+
+<body class="dark">
+    <div class="container">
+        <header class="blog-hero animate-fade-in">
+            <div class="blog-title-area">
+                <a href="../../pages/blog.html" class="back-btn" style="display: flex;">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M19 12H5M12 19l-7-7 7-7" />
+                    </svg>
+                </a>
+                <h1>Tasarımın Hız Treni: Tailwind CSS</h1>
+            </div>
+            <time class="blog-card-date">20 Mayıs 2024 • 6 dk okuma</time>
+        </header>
+
+        <article class="blog-content">
+            <p>Modern web geliştirme süreçlerinde hız ve özgünlük arasında her zaman bir denge kurmak zorundayız. Klasik
+                CSS yazmak zaman alırken, hazır UI kütüphaneleri (Bootstrap gibi) sitelerin birbirine benzemesine neden
+                oluyor. İşte <strong>Tailwind CSS</strong>, bu iki dünya arasındaki köprüyü kuran "utility-first"
+                yaklaşımıyla geliştirici deneyimini devrimsel bir noktaya taşıdı.</p>
+
+            <h2>Utility-First Nedir?</h2>
+            <p>Geleneksel yöntemde, bir kart bileşeni için <code>.card</code> sınıfı oluşturur ve içine onlarca CSS
+                özelliği yazarsınız. Tailwind'de ise her sınıf tek bir görevi yerine getirir. Örneğin, <code>flex</code>
+                elemanı esnek yapar, <code>pt-4</code> üstten boşluk verir, <code>text-center</code> metni ortalar.</p>
+            <p>Bu yaklaşım sayesinde, CSS dosyanız ile HTML dosyanız arasında sürekli mekik dokumak yerine, tüm tasarımı
+                doğrudan HTML üzerinde inşa edersiniz.</p>
+
+            <div class="tech-grid" style="margin: 2rem 0;">
+                <div class="tech-card"><span class="tech-name">Hızlı Prototipleme</span></div>
+                <div class="tech-card"><span class="tech-name">Sıfır CSS Dosyası</span></div>
+                <div class="tech-card"><span class="tech-name">Tam Esneklik</span></div>
+                <div class="tech-card"><span class="tech-name">JIT Motoru</span></div>
+            </div>
+
+            <h2>Neden Tailwind CSS Kullanmalısınız?</h2>
+
+            <h3>1. Tasarım Kararlarını Hızlandırır</h3>
+            <p>Tailwind, size sınırsız bir renk paleti veya rastgele piksel değerleri yerine; önceden belirlenmiş,
+                profesyonel bir tasarım sistemi sunar. <code>bg-blue-500</code> dediğinizde, projenin her yerinde aynı
+                mavi tonunu kullanacağınızdan emin olursunuz.</p>
+
+            <h3>2. Bakım Kolaylığı</h3>
+            <p>Bir projeye aylar sonra geri döndüğünüzde, <code>.custom-header-wrapper-inner</code> sınıfının ne işe
+                yaradığını anlamaya çalışmak yerine, sınıflara bakarak o elementin nasıl göründüğünü anında
+                görebilirsiniz.</p>
+
+            <h3>3. Performans ve Küçük Dosya Boyutu</h3>
+            <p>Tailwind'in <strong>PurgeCSS</strong> ve yeni nesil <strong>JIT (Just-In-Time)</strong> motoru sayesinde,
+                üretim aşamasında sadece kullandığınız sınıflar CSS dosyasına dahil edilir. Bu da genellikle 10kb'dan
+                daha küçük CSS dosyaları üretilmesini sağlar.</p>
+
+            <h2>Duyarlı Tasarım (Responsive)</h2>
+            <p>Tailwind ile responsive tasarım yapmak hiç bu kadar kolay olmamıştı. Sadece sınıfın başına bir prefix
+                eklemeniz yeterli:</p>
+            <pre><code style="color: #60a5fa;">&lt;!-- Mobilde dikey, masaüstünde yan yana dizilim --&gt;
+&lt;div class="flex flex-col md:flex-row"&gt; ... &lt;/div&gt;</code></pre>
+
+            <h2>Konfigürasyon Gücü</h2>
+            <p>Tailwind'in "herkesin sitesi aynı görünüyor" eleştirisine en büyük cevabı <code>tailwind.config.js</code>
+                dosyasıdır. Bu dosya üzerinden kendi renklerinizi, yazı tiplerinizi ve boşluk değerlerinizi tanımlayarak
+                tamamen markanıza özel bir framework oluşturabilirsiniz.</p>
+
+            <h2>Pratik Bir Örnek</h2>
+            <p>Modern bir butonun Tailwind ile nasıl göründüğüne bakalım:</p>
+
+            <div class="blog-card-content">
+                <pre><code style="color: #60a5fa;">&lt;button class="
+  bg-indigo-600 hover:bg-indigo-700 
+  text-white font-medium 
+  py-2 px-6 rounded-full 
+  transition-all duration-300 
+  shadow-lg hover:shadow-indigo-500/50"&gt;
+  Keşfet
+&lt;/button&gt;</code></pre>
+            </div>
+
+            <h2>Sonuç</h2>
+            <p>Tailwind CSS bir araçtan ziyade, bir tasarım felsefesidir. Başlarda HTML kalabalık görünse de, sağladığı
+                hız ve tutarlılık bir kez alıştıktan sonra vazgeçilmez hale gelir. Eğer modern web dünyasında estetik ve
+                performansı bir arada arıyorsanız, Tailwind sizin için en doğru seçimdir.</p>
+
+            <div style="margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--border-color);">
+                <h2 style="margin-top: 0; margin-bottom: 2rem;">Daha Fazlası</h2>
+                <div class="blog-list">
+                    <article class="blog-item" data-tag="database" data-title="mongodb'ye başlangıç">
+                        <a class="blog-card-link" href="mongo.html">
+                            <div class="blog-card-left">
+                                <h2 class="blog-card-title">MongoDB'ye Başlangıç: Yeni Başlayanlar İçin Rehber</h2>
+                                <p class="blog-card-date">15 Mayıs 2024</p>
+                            </div>
+                            <div class="blog-card-arrow">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="icon">
+                                    <path d="m5 12 7-7 7 7"></path>
+                                    <path d="M12 19V5"></path>
+                                </svg>
+                            </div>
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </article>
+    </div>
+
+    <div class="dock-wrapper">
+        <nav class="dock-container">
+            <div class="dock-item">
+                <a href="/" aria-label="Ana Sayfa" class="dock-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="icon">
+                        <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"></path>
+                        <path
+                            d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z">
+                        </path>
+                    </svg>
+                </a>
+            </div>
+            <div class="dock-item">
+                <a href="./blog.html" aria-label="Bloglar" class="dock-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="icon">
+                        <path d="M2 6h4"></path>
+                        <path d="M2 10h4"></path>
+                        <path d="M2 14h4"></path>
+                        <path d="M2 18h4"></path>
+                        <rect width="16" height="20" x="4" y="2" rx="2"></rect>
+                        <path d="M16 2v20"></path>
+                    </svg>
+                </a>
+            </div>
+            <div class="dock-item">
+                <a href="./projects.html" aria-label="Projeler" class="dock-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="icon">
+                        <path d="m14 13-8.381 8.38a1 1 0 0 1-3.001-3L11 9.999"></path>
+                        <path
+                            d="M15.973 4.027A13 13 0 0 0 5.902 2.373c-1.398.342-1.092 2.158.277 2.601a19.9 19.9 0 0 1 5.822 3.024">
+                        </path>
+                        <path
+                            d="M16.001 11.999a19.9 19.9 0 0 1 3.024 5.824c.444 1.369 2.26 1.676 2.603.278A13 13 0 0 0 20 8.069">
+                        </path>
+                        <path
+                            d="M18.352 3.352a1.205 1.205 0 0 0-1.704 0l-5.296 5.296a1.205 1.205 0 0 0 0 1.704l2.296 2.296a1.205 1.205 0 0 0 1.704 0l5.296-5.296a1.205 1.205 0 0 0 0-1.704z">
+                        </path>
+                    </svg>
+                </a>
+            </div>
+
+            <div class="dock-divider"></div>
+
+            <div class="dock-item">
+                <a href="https://github.com/omerasaf54" target="_blank" aria-label="GitHub" class="dock-link">
+                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" class="icon"
+                        height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12">
+                        </path>
+                    </svg>
+                </a>
+            </div>
+            <div class="dock-item">
+                <a href="https://instagram.com/asaf_omerr54" target="_blank" aria-label="Instagram" class="dock-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="icon">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                        <path d="M16 11.37a4 4 0 1 1-4.63-4.63 4 4 0 0 1 4.63 4.63z"></path>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                    </svg>
+                </a>
+            </div>
+            <div class="dock-item">
+                <a href="./contact.html" aria-label="Mail" class="dock-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="icon">
+                        <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path>
+                        <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                    </svg>
+                </a>
+            </div>
+
+            <div class="dock-divider"></div>
+
+            <div class="dock-item">
+                <button aria-label="Temayı Değiştir" class="dock-button" id="themeToggle"></button>
+            </div>
+        </nav>
+    </div>
+
+    <script src="../../js/main.js"></script>
+    <script src="../../js/theme.js"></script>
+</body>
+
+</html>

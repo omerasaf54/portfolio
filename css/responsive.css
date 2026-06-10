@@ -1,0 +1,23 @@
+@media (min-width: 640px) {
+    .dock-container {
+        padding: 8px;
+    }
+    .dock-item {
+        width: 48px;
+        height: 48px;
+    }
+    .icon {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+@media (min-width: 768px) {
+    .back-btn-wrapper {
+        display: block;
+    }
+    
+    .blog-title-area h1 {
+        font-size: 1.875rem;
+    }
+}
